@@ -1,0 +1,31 @@
+<!-- ScrollView memungkinkan layar digulir jika konten melebihi tinggi layar. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<!-- Layout utama vertikal dengan jarak tepi 24dp. -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:gravity="center_vertical">
+<!-- Judul aplikasi, tebal dan rata tengah. -->
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Kalkulator Sederhana" android:textSize="26sp" android:textStyle="bold" android:gravity="center" android:layout_marginBottom="24dp"/>
+<!-- Input angka pertama; menerima desimal dan angka negatif. -->
+<EditText android:id="@+id/angka1" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Angka 1" android:inputType="numberDecimal|numberSigned" android:layout_marginBottom="12dp"/>
+<!-- Input angka kedua; menerima desimal dan angka negatif. -->
+<EditText android:id="@+id/angka2" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Angka 2" android:inputType="numberDecimal|numberSigned" android:layout_marginBottom="12dp"/>
+<!-- Baris horizontal untuk tombol tambah dan kurang. -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+<!-- Tombol tambah; weight 1 membagi lebar secara merata. -->
+<Button android:id="@+id/tambah" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="+" android:textSize="22sp"/>
+<!-- Tombol kurang. -->
+<Button android:id="@+id/kurang" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="−" android:textSize="22sp"/>
+</LinearLayout>
+<!-- Baris horizontal untuk tombol kali dan bagi. -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+<!-- Tombol kali. -->
+<Button android:id="@+id/kali" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="×" android:textSize="22sp"/>
+<!-- Tombol bagi. -->
+<Button android:id="@+id/bagi" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="÷" android:textSize="22sp"/>
+</LinearLayout>
+<!-- Label hasil perhitungan. -->
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hasil perhitungan" android:gravity="center" android:layout_marginTop="24dp"/>
+<!-- Menampilkan hasil dengan latar berwarna dan teks besar. -->
+<TextView android:id="@+id/hasil" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:textSize="30sp" android:gravity="center" android:padding="16dp" android:background="#E4E9F2"/>
+<!-- Tombol reset untuk mengosongkan input dan hasil. -->
+<Button android:id="@+id/reset" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RESET" android:layout_marginTop="16dp"/>
+</LinearLayout></ScrollView>
